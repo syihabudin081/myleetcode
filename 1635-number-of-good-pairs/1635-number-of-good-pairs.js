@@ -3,9 +3,10 @@
  * @return {number}
  */
 var numIdenticalPairs = function(nums) {
-  const numFrequency = {}; 
+     const numFrequency = {}; 
   let goodPairs = 0; 
-  for (const num of nums) {
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
     if (numFrequency[num]) {
       goodPairs += numFrequency[num];
       numFrequency[num]++;
